@@ -26,10 +26,10 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/burakonero/makeasquare.git"
+    "url": "git+https://github.com/burakonero/makeasquare1.git"
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/burakonero/makeasquare/issues"
+    "url": "https://github.com/burakonero/makeasquare1/issues"
   }
 }
