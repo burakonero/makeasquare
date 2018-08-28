@@ -1,21 +1,13 @@
 var express = require('express'),
-    fs = require('fs'),
-    app = express();
- 
- 
-var ip = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
- 
- 
-app.get('/', function(req, res) {
-    res.send('Hello from NodeJS  at '+ new Date());
-});
- 
- 
-app.listen(8080, ip);
- 
-module.exports = app;
+	app = express(),
+	server = require('http').createServer(app),
+	io = require('socket.io').listen(server);
+	
+
+var ip = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 
 app.use(express.static(__dirname + '/public'));
+server.listen((process.env.PORT || 5000));
 
 var usernumm = 0;
 var usernumm1 = 0;
