@@ -3,6 +3,7 @@ var express = require('express'),
 	app = express(),
 	server = require('http').createServer(app),
 	io = require('socket.io').listen(server);
+	
 app.use(express.static(__dirname + '/MyApplication/app/src/main/java/com/example/burak/myapplication'));
 server.listen((process.env.PORT || 5000));
 
@@ -115,8 +116,8 @@ io.on('connection', function(socket){
   	//finds number of online users
 	
 });
-
+/*
 http.listen(port, function(){
   console.log('listening on *:' + port);
-});
+});*/
 	
