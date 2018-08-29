@@ -6,7 +6,7 @@ var express = require('express'),
 
 var ip = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/MyApplication/app/src/main/java/com/example/burak/myapplication'));
 server.listen((process.env.PORT || 5000));
 
 var usernumm = 0;
