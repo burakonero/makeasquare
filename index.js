@@ -1,11 +1,13 @@
-
 var express = require('express'),
 	app = express(),
 	server = require('http').createServer(app),
 	io = require('socket.io').listen(server);
 	
-app.use(express.static(__dirname + '/MyApplication/app/src/main/java/com/example/burak/myapplication'));
-server.listen((process.env.PORT || 5000));
+
+var ip = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+
+
+server.listen((process.env.OPENSHIFT_NODEJS_PORT || 5000),ip);
 
 var usernumm = 0;
 var usernumm1 = 0;
@@ -13,6 +15,8 @@ var usernum1 = [];
 var whoturn = [];
 var nick3='aa';
 var playagain = 0;
+
+app.use(express.static(__dirname + '/MyApplication/app/src/main/java/com/example/burak/myapplication'));
 io.on('connection', function(socket){
 	console.log('biri geldi');
 	
