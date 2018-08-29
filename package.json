@@ -9,7 +9,7 @@
     "openshift"
   ],
   "scripts": {
-  "start": "node index.js"
+    "start": "node index.js"
   },
   "author": {
     "name": "OpenShift",
@@ -17,20 +17,17 @@
     "url": "http://www.openshift.com/"
   },
   "homepage": "http://www.openshift.com/",
-  
-
-  
   "engines": {
-	"node": ">= 0.10.0",
-	"npm": ">= 1.0.0"
+    "node": ">= 0.10.0",
+    "npm": ">= 1.0.0"
   },
-
   "dependencies": {
-    "express": ">=3.4.4"
+    "express": "^4.16.3",
+    "http": "0.0.0",
+    "socket.io": "^2.1.1"
   },
   "devDependencies": {},
   "bundleDependencies": [],
-
   "private": true,
   "main": "index.js"
 }

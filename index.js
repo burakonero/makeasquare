@@ -1,16 +1,9 @@
-var express = require('express')
-var app = express();
+var app = require('express')();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
 
-app.set('port', (process.env.PORT || 5000))
-app.use(express.static(__dirname + '/public'))
 
-app.get('/', function(request, response) {
-  response.send('Hello World!')
-})
 
-app.listen(app.get('port'), function() {
-  console.log("Node app is running at localhost:" + app.get('port'))
-})
 
 var usernumm = 0;
 var usernumm1 = 0;
@@ -19,6 +12,11 @@ var whoturn = [];
 var nick3='aa';
 var playagain = 0;
 
+app.set('port', (process.env.PORT || 5000));
+
+app.get('/', function(req, res){
+    res.sendFile(__dirname + '/index.html');
+});
 
 io.on('connection', function(socket){
 	console.log('biri geldi');
@@ -123,8 +121,8 @@ io.on('connection', function(socket){
   	//finds number of online users
 	
 });
-/*
+
 http.listen(port, function(){
   console.log('listening on *:' + port);
-});*/
+});
 	
