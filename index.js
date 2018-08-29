@@ -3,10 +3,6 @@ var express = require('express'),
 	app = express(),
 	server = require('http').createServer(app),
 	io = require('socket.io').listen(server);
-	
-
-var ip = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
-
 app.use(express.static(__dirname + '/MyApplication/app/src/main/java/com/example/burak/myapplication'));
 server.listen((process.env.PORT || 5000));
 
