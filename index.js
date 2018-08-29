@@ -16,7 +16,8 @@ var whoturn = [];
 var nick3='aa';
 var playagain = 0;
 
-app.use(express.static(__dirname + '/MyApplication/app/src/main/java/com/example/burak/myapplication'));
+app.use(express.static(__dirname + '/public'));
+
 io.on('connection', function(socket){
 	console.log('biri geldi');
 	
