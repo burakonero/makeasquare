@@ -7,7 +7,7 @@ var express = require('express'),
 var ip = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 
 
-server.listen((process.env.OPENSHIFT_NODEJS_PORT || 5000),ip);
+server.listen((process.env.PORT || 5000),ip);
 
 var usernumm = 0;
 var usernumm1 = 0;
