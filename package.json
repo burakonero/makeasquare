@@ -1,25 +1,33 @@
 {
-  "name": "makeasquare",
+  "name": "OpenShift-Sample-App",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "OpenShift Sample Application",
+  "keywords": [
+    "OpenShift",
+    "Node.js",
+    "application",
+    "openshift"
+  ],
+  "author": {
+    "name": "OpenShift",
+    "email": "ramr@example.org",
+    "url": "http://www.openshift.com/"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/burakonero/makeasquare1.git"
+  "homepage": "http://www.openshift.com/",
+  
+
+  "engines": {
+    "node": ">= 0.6.0",
+    "npm": ">= 1.0.0"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/burakonero/makeasquare1/issues"
-  },
-  "homepage": "https://github.com/burakonero/makeasquare1#readme",
+
   "dependencies": {
-    "express": "^4.16.3",
-    "heroku": "^7.12.3"
+    "express": "~3.4.4"
   },
   "devDependencies": {},
-  "description": ""
-  
+  "bundleDependencies": [],
+
+  "private": true,
+  "main": "index.js"
 }
+
